@@ -1,198 +1,230 @@
+/* Responsive Styles */
+
+/* For tablets and small desktops */
 @media (max-width: 992px) {
-  .container {
+  .container,
+  .popular-product-area .container {
     width: 95%;
   }
+
   .hero-product .img-wrap {
     width: 320px;
     height: 320px;
   }
+
   .hero-product .img-wrap:before {
     width: 270px;
     height: 270px;
   }
+
   .hero-product .img-wrap img {
-    width: 320px;
+    width: 100%;
   }
+
   .logo-wrap {
     padding: 30px 10px;
   }
+
   .popular-product-card-wrapper {
     grid-gap: 15px;
   }
-  .popular-product-area .container {
-    width: 95%;
-  }
+
   .popular-product-card .popular-product-card-thumbnail {
-    height: inherit;
+    height: auto;
   }
+
   .offer-box {
-    margin: 0px 50px;
+    margin: 0 50px;
     flex-wrap: nowrap;
   }
+
   .footer-contents p {
-    padding: 0px 0px;
+    padding: 0;
   }
 }
 
+/* For landscape phones and tablets */
 @media (max-width: 768px) {
   .menu-wrap {
     justify-content: center;
     flex-direction: column;
   }
+
   .main-menu {
     margin-top: 20px;
   }
+
   .hero-area {
-    padding: 50px 0px;
+    padding: 50px 0;
   }
+
   .hero-area .row {
     flex-direction: column-reverse;
   }
-  .half-column {
-    width: 100%;
-  }
+
+  .half-column,
   .hero-product {
+    width: 100%;
     justify-content: center;
   }
+
   .hero-contents {
     margin-top: 30px;
   }
+
   .hero-contents h1 {
     font-size: 34px;
   }
+
   .logo-wrap {
     gap: 35px;
     justify-content: center;
   }
+
   .popular-product-card-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .popular-product-area .btn-2 {
     text-align: center;
   }
+
   .offer-box {
-    margin: 0px 10px;
-  }
-  .offer-box {
+    margin: 0 10px;
     padding: 15px 30px;
   }
 }
 
+/* For portrait phones */
 @media (max-width: 576px) {
   .nav-bar {
     display: none;
   }
-  .hero-contents h1 {
+
+  .hero-contents h1,
+  .title {
     font-size: 26px;
     text-align: center;
   }
-  .hero-contents p {
-    text-align: center;
-  }
+
+  .hero-contents p,
   .hero-btn {
     text-align: center;
   }
+
   .logo-list {
     padding-bottom: 50px;
   }
+
   .logo-wrap {
-    gap: 0px;
+    gap: 0;
   }
+
   .single-logo {
     text-align: center;
   }
-  .single-logo img {
-    width: 75%;
-  }
+
+  .single-logo img,
   .logo-wrap:before,
   .logo-wrap:after {
+    width: 75%;
     height: 1px;
   }
-  .title {
-    font-size: 26px;
-  }
+
   .popular-product-area {
     padding-bottom: 50px;
   }
+
   .popular-product-card-wrapper {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
+
   .popular-product-area .btn-2 {
     text-align: center;
   }
+
   .offer-area {
     width: 80%;
-    justify-content: center;
-    align-items: center;
     margin-left: 50px;
   }
 
   .offer-box {
     flex-wrap: wrap;
     flex-direction: column-reverse;
-    padding-bottom: 40px;
-    padding-top: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 5px 15px 40px;
   }
-  .offer-box .offer-img {
-    text-align: center;
-  }
+
+  .offer-box .offer-img,
   .offer-txt-content {
     text-align: center;
   }
+
   .offer-txt-content p {
-    margin: 30px 0px;
+    margin: 30px 0;
   }
 }
 
+/* For very small devices */
 @media (max-width: 374px) {
   .container {
     width: 97%;
   }
+
   .hero-product .img-wrap {
     width: 280px;
     height: 280px;
   }
+
   .hero-product .img-wrap:before {
     width: 220px;
     height: 220px;
   }
+
   .hero-product .img-wrap img {
     width: 240px;
   }
+
   .hero-contents h1 {
     font-size: 22px;
   }
+
   .hero-contents p {
     font-size: 14px;
-    margin: 25px 0px;
+    margin: 25px 0;
   }
+
   .offer-img iframe {
     width: 80%;
     margin-right: 150px;
   }
+
   .offer-box .offer-img {
-    text-align: center;
     width: 240px;
   }
+
   .offer-box .offer-img img {
     width: 100%;
   }
+
   .title {
     font-size: 22px;
   }
+
   .offer-txt-content h2 {
     font-size: 18px;
   }
 }
+
+/* For large screens */
 @media only screen and (min-width: 1500px) {
   .container {
     width: 1160px;
   }
+
   .offer-box {
-    margin: 0px 175px;
+    margin: 0 175px;
   }
+
   .footer-contents p {
     padding: 0;
   }

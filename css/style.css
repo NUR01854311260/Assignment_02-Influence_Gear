@@ -1,184 +1,244 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/* Reset default browser styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Set base font and color for the body */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #3a3a3a;
 }
-/* global styles start*/
-.flexed {
+
+/* Utility classes for common flexbox configurations */
+.flex-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between; /* Adjusted for better spacing */
 }
-.align-cen {
+
+.center-aligned {
   align-items: center;
+  justify-content: center; /* Added for horizontal centering */
 }
+
+/* Style adjustments for anchor tags */
 a {
   text-decoration: none;
+  color: inherit; /* Ensures links use the current text color */
 }
-li {
-  list-style-type: none;
+
+/* List style removal for unordered and ordered lists */
+ul,
+ol {
+  list-style: none;
 }
+
+/* Image width adjustment for better responsiveness */
 img {
-  width: 100%;
+  max-width: 100%; /* Changed to ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
 }
+
+/* Container class for centralized content alignment */
 .container {
-  width: 80%;
+  max-width: 1200px; /* Set a max-width for larger screens */
   margin: 0 auto;
+  padding: 0 15px; /* Add padding for some breathing room */
 }
 
 /* global styles end*/
-/*
-header style start 
-*/
+
+/* Header Styles */
+
+/* Base styles for the header */
 header {
-  padding: 30px 0px;
+  padding: 30px 0;
 }
+/* Horizontal rule styling */
 hr {
   margin-top: 15px;
   border-radius: 15px;
   border: 1px solid #9e2ce0;
 }
+/* Logo styling with transition for hover state */
 .logo {
   font-size: 24px;
-  font-weight: 900;
+  font-weight: bold; /* Use 'bold' instead of 900 for better readability */
   color: #3a3a3a;
-  transition: all 0.5s ease-in-out;
+  transition: color 1s ease-in; /* Specify the property for transition */
 }
 .logo:hover {
   color: #9e2ce0;
 }
+/* Menu wrapper to align items */
 .menu-wrap {
+  display: flex; /* Ensure flex display is set */
   justify-content: space-between;
+  align-items: center; /* Vertically center items */
 }
+/* Main menu link styling */
 .main-menu li a {
   font-weight: 500;
   color: #3a3a3a;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out; /* Specify the property for transition */
 }
 .main-menu li a:hover {
   color: #9e2ce0;
 }
+/* Icon styling within main menu links */
 .main-menu li a i {
   font-size: 20px;
 }
+/* Main menu list item spacing */
 .main-menu li {
   margin-left: 35px;
 }
+/* header style end */
 
-/*
-header style end
-*/
-/* 
-hero area style start 
-*/
+/* Hero Area Styles */
+
+/* General padding for the hero area */
 .hero-area {
-  padding: 90px 0px;
+  padding: 90px 0;
 }
+
+/* Heading styles within hero contents */
 .hero-contents h1 {
   font-size: 50px;
   line-height: 1.5;
-  font-weight: bolder;
-}
-.hero-contents p {
-  font-weight: bold;
-  margin: 15px 0px;
-  line-height: 2;
-}
-.half-column {
-  width: 50%;
-}
-.hero-area .row {
-  justify-content: space-between;
+  font-weight: 800; /* Use '800' for a bolder weight that's less intense than 'bolder' */
 }
 
+.hero-contents p {
+  font-weight: 600; /* Use '600' for semi-bold weight */
+  margin: 15px 0;
+  line-height: 2;
+}
+
+/* Half-width column for layout */
+.half-column {
+  flex-basis: 50%; /* Use flex-basis for flex items */
+}
+
+/* Flexbox row within the hero area */
+.hero-area .row {
+  display: flex; /* Ensure display flex is set */
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+}
+
+/* Product display at the end of the flex container */
 .hero-product {
   display: flex;
   justify-content: flex-end;
 }
 
+/* Button styling with transition effects */
 .btn {
   display: inline-block;
   padding: 15px 25px;
   background-color: #dc9ff7;
-  color: rgb(0, 0, 0);
+  color: #000; /* Use hex code for black color */
   border-radius: 20px;
-  transition: all 0.5s ease-in-out;
+  transition: background-color 0.5s ease, padding 0.5s ease; /* Specify properties for transition */
 }
+
 .btn:hover {
   background-color: #bf1dff;
-  padding: 20px;
+  padding: 20px; /* Consider using 'padding: 15px 30px;' for a more subtle effect */
 }
+
+/* Icon spacing within buttons */
 .btn i {
   margin-left: 8px;
-  transition: all 0.3s ease-in-out;
+  transition: margin 0.3s ease; /* Specify property for transition */
 }
+
 .btn:hover i {
-  padding-left: 10px;
+  margin-left: 10px;
 }
-/* 
-hero area style end 
-*/
-/* 
-logo list area style  start
-*/
+/* hero area style end */
+
+/* Logo List Area Styles */
+
+/* Padding for the bottom of the logo list */
 .logo-list {
   padding-bottom: 80px;
 }
+
+/* Flex container for logo wrapping with space distribution and padding */
 .logo-wrap {
+  display: flex; /* Ensure flex display is set */
   justify-content: space-between;
   padding: 20px 120px;
   position: relative;
 }
-.logo-wrap:before,
-.logo-wrap:after {
-  content: '';
-  display: block;
+
+/* Pseudo-elements for decorative lines above and below the logo wrap */
+.logo-wrap::before,
+.logo-wrap::after {
+  content: "";
   position: absolute;
-  background-image: radial-gradient(at 50%, #efc6ff, transparent 62%);
-  background-size: 100% 2px;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 0.5px;
+  height: 1px; /* Adjusted for consistency */
+  background-image: radial-gradient(circle at 50%, #efc6ff, transparent 62%);
+  background-repeat: no-repeat;
 }
-.logo-wrap:after {
-  top: 100%;
+
+.logo-wrap::after {
+  top: auto;
+  bottom: 0; /* Position at the bottom of the parent element */
 }
-/* 
-logo list area style end
-*/
-/*
- popular product area style start  
-*/
+
+/* End of Logo List Area Styles */
+
+/* Popular Product Area Styles */
+
+/* Base padding for the popular product area */
 .popular-product-area {
   padding-bottom: 90px;
 }
+
+/* Container width adjustment for layout */
 .popular-product-area .container {
   width: 80%;
+  max-width: 1200px; /* Set a max-width for larger screens */
+  margin: 0 auto; /* Center the container */
 }
+
+/* Title styling for the section */
 .title {
   color: #3a3a3a;
   font-size: 40px;
   font-weight: 600;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 80px;
+  margin: 20px 0 80px; /* Combine margin for shorthand */
 }
+
+/* Grid layout for product cards */
 .popular-product-card-wrapper {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Use repeat function for equal columns */
   grid-gap: 30px;
 }
+
+/* Individual product card styling */
 .popular-product-card {
   border-radius: 6px;
-  box-shadow: 0px 0px 14px 5px #dddddd70;
+  box-shadow: 0 0 14px 5px rgba(221, 221, 221, 0.44); /* Use rgba for shadow color */
   background-color: #fff;
-  transition: all 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out; /* Specify properties for transition */
 }
+
+/* Thumbnail styling within product cards */
 .popular-product-card .popular-product-card-thumbnail {
   overflow: hidden;
   border: 15px solid #fff;
@@ -186,133 +246,187 @@ logo list area style end
   width: 100%;
   height: 260px;
 }
+
+/* Image styling for responsiveness */
 .popular-product-card .popular-product-card-thumbnail img {
+  width: 100%; /* Ensure full width */
+  height: auto; /* Maintain aspect ratio */
   object-fit: cover;
-  transition: all 0.4s linear;
+  transition: transform 0.4s linear;
 }
+
+/* Hover state for product cards */
 .popular-product-card:hover {
-  box-shadow: 0 5px 10px #f7e4ff;
-  transform: scale(1.1, 1.1);
+  box-shadow: 0 5px 10px rgba(247, 228, 255, 1);
+  transform: scale(1.1); /* Simplify transform property */
 }
+
+/* Content styling within product cards */
 .popular-product-card .card-content {
-  padding: 0px 15px 15px 15px;
+  padding: 15px;
 }
+
+/* Product name styling */
 .popular-product-card .card-content .product-name {
   font-size: 24px;
   font-weight: 500;
   color: #18191f;
   margin-top: 5px;
 }
+
+/* Price styling for products */
 .popular-product-card .card-content .popular-product-price {
   display: inline-block;
   font-size: 22px;
   color: #000;
-  margin: 7px 0px;
+  margin: 7px 0;
 }
+
+/* Review list item spacing */
 .popular-product-card .card-content .pr-review li {
+  display: inline-block; /* Ensure inline-block display */
   margin-right: 3px;
 }
+
+/* Review star icon styling */
 .popular-product-card .card-content .pr-review li i {
   font-size: 16px;
-  color: #fb8200;
+  color: #fb8200; /* Filled star color */
 }
+
+/* Unfilled star color */
 .popular-product-card .card-content .pr-review li i.unfilled {
   color: #818181;
 }
+
+/* Rating text styling */
 .popular-product-card .card-content .pr-review li .rating {
+  display: inline-block; /* Ensure inline-block display */
   margin-left: 10px;
   color: #5e6366;
 }
 
+/* Footer list item styling */
 .popular-product-card .card-content .popular-product-footer li {
   color: #787885;
   font-weight: 500;
   margin-top: 5px;
 }
+
+/* Button alignment and spacing */
 .popular-product-area .btn-2 {
   text-align: right;
   margin-top: 30px;
 }
+
+/* Secondary button styling */
 .popular-product-area .btn-2 .btn {
   background-color: #dc9ff7;
   color: #ffffff;
-  font-weight: 900;
-  text-align: right;
+  font-weight: bold; /* Use 'bold' instead of 900 for better readability */
   padding: 20px 30px;
-  padding-right: 20px;
 }
+
+/* Hover state for secondary button */
 .popular-product-area .btn-2 .btn:hover {
-  color: rgb(255, 255, 255);
   background-color: #bf1dff;
-  padding: 20px;
+  color: #fff; /* Use hex code for white color */
+  padding: 20px; /* Consider if padding change is necessary on hover */
 }
+
+/* Icon margin adjustment on hover */
 .popular-product-area .btn-2 .btn:hover i {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
-/*
- popular product area style end 
-*/
+/* End of Popular Product Area Styles */
 
-/* offer area style start  */
+/* Offer Area Styles */
+
+/* Layout adjustments for the offer area */
 .offer-area {
   margin-left: 200px;
   width: 80%;
   padding-bottom: 60px;
 }
+
+/* Styling for the offer box with space distribution and rounded corners */
 .offer-box {
-  background: #f1e4ff;
+  background-color: #f1e4ff;
+  display: flex; /* Ensure flex display is set */
   justify-content: space-between;
-  margin: 0px 200px;
+  margin: 0 200px;
   padding: 15px 50px;
   border-radius: 30px;
 }
+
+/* Heading styles within offer text content */
 .offer-txt-content h2 {
   font-size: 20px;
+  color: #3a3a3a; /* Adjusted for better contrast */
 }
+
+/* Paragraph styles within offer text content */
 .offer-txt-content p {
   font-size: 17px;
   font-weight: 500;
-  margin: 15px 0px;
+  margin: 15px 0;
   color: #818181;
 }
+
+/* Offer image iframe padding adjustment */
 .offer-img iframe {
   padding-right: 200px;
 }
+
+/* Offer image container alignment */
 .offer-box .offer-img {
   width: 300px;
   text-align: right;
 }
-/* offer area style end */
-/*
- footer style start
-*/
+
+/* Footer Styles */
+
+/* Padding and background color for the footer */
 footer {
-  padding: 70px 0px;
+  padding: 70px 0;
   background-color: #392c4e;
 }
+
+/* Center alignment for footer contents */
 .footer-contents {
   text-align: center;
 }
+
+/* Footer logo styling */
 .footer-logo {
   color: #fff;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: bold; /* Use 'bold' instead of 700 for better readability */
 }
+
+/* Paragraph styles within footer contents */
 .footer-contents p {
   font-size: 14px;
   color: #fff;
-  font-weight: 200;
-  padding: 0px 40%;
+  font-weight: light; /* Use 'light' instead of 200 for better readability */
+  padding: 0 20%; /* Adjusted padding for better spacing */
   margin-top: 10px;
 }
+
+/* Center alignment for footer list */
 .footer-contents ul {
+  display: flex; /* Ensure flex display is set */
   justify-content: center;
   margin-top: 15px;
 }
+
+/* List item spacing within footer */
 .footer-contents ul li {
   margin-right: 10px;
 }
+
+/* Styling for links within footer list items */
 .footer-contents ul li a {
   width: 35px;
   height: 35px;
@@ -321,15 +435,16 @@ footer {
   justify-content: center;
   background-color: #564c5a;
   border-radius: 50%;
-  transition: all 0.3s linear;
+  transition: transform 0.3s linear;
 }
+
+/* Hover effect for links within footer list items */
 .footer-contents ul li a:hover {
   transform: scale(1.1);
 }
+
+/* Icon styling within footer list item links */
 .footer-contents ul li a i {
-  color: rgb(207, 124, 240);
+  color: #cf7cf0; /* Use hex code for color consistency */
   font-size: 18px;
 }
-/*
- footer style end
-*/
