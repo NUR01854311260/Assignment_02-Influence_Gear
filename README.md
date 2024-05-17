@@ -1,1 +1,1 @@
-# Assignment_02-Influence_Gear
+![screencapture-file-C-Users-Adnan-Desktop-Assignment-02-Influence-Gear-main-Assignment-02-Influence-Gear-main-index-html-2024-05-17-18_09_46](https://github.com/Nur-Adnan/Assignment_02-Influence_Gear/assets/56475820/1b30ff5b-4f14-4462-a9a7-a137f968794a)
